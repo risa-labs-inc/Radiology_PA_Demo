@@ -342,6 +342,10 @@ export default function Authorization() {
     if (orderData && (orderData.orderId === 'RAD-008' || orderData.orderId === 'RAD-009')) {
       return '/documents/Filed_PA.pdf'
     }
+    // For surgery patients, show NAR_SUR.pdf
+    if (orderData && orderData.orderId.startsWith('SUR-')) {
+      return '/documents/NAR_SUR.pdf'
+    }
     // Using placeholder image for other patients
     return '/documents/NAR_SS.png'
   }

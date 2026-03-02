@@ -173,13 +173,13 @@ export default function PatientEV() {
                   <div>
                     <div className="text-xs text-gray-500 mb-1">Service Type Name</div>
                     <div className="text-[11px] font-medium text-gray-900">
-                      {order.imagingModality === 'Surgery' ? 'Surgical Services' : 'Diagnostic Imaging'}
+                      {order.imagingModality === 'Surgery' ? 'Surgery' : 'Diagnostic Imaging'}
                     </div>
                   </div>
                   <div>
                     <div className="text-xs text-gray-500 mb-1">Service Type Code</div>
                     <div className="text-[11px] font-medium text-gray-900">
-                      {order.imagingModality === 'Surgery' ? '50' : '62'}
+                      {order.imagingModality === 'Surgery' ? '11' : '62'}
                     </div>
                   </div>
                 </div>
