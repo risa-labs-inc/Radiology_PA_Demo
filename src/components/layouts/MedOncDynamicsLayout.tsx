@@ -197,7 +197,7 @@ export default function MedOncDynamicsLayout() {
     ...(shouldShowIssuesTab() ? [{ id: 'issues', label: 'Issues' }] : []),
     { id: 'documents', label: 'Documents' },
     { id: 'workflow', label: 'Workflow' },
-    { id: 'auth-letters', label: 'Auth Letters' },
+    ...(paStatus.authStatus !== 'NAR' ? [{ id: 'auth-letters', label: 'Auth Letters' }] : []),
     { id: 'business-office', label: 'Comments' },
     ...(shouldShowFiledPATab() ? [{ id: 'filed-pa', label: 'Filed PA' }] : []),
   ]

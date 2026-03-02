@@ -290,12 +290,12 @@ export default function Workflow() {
           ]
     })
 
-    // Step 4: Existing Authorization Check
+    // Step 4: Authorization Check
     const hasAuthOnFile = paStatus.authStatus === 'Auth on File'
     const isNARForAuthCheck = paStatus.authStatus === 'NAR'
     steps.push({
       id: 'auth-check',
-      name: 'Existing Authorization Check',
+      name: 'Authorization Check',
       status: eligibilityFailed
         ? 'Skipped'
         : isNARForAuthCheck
@@ -312,7 +312,7 @@ export default function Workflow() {
         ? ['Step not required because prior authorization not required']
         : hasAuthOnFile
         ? [
-            'Existing authorization verified with payer',
+            'Authorization verified with payer',
             'Valid authorization found on file',
             'No additional authorization submission required'
           ]

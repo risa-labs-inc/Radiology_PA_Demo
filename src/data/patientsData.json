@@ -963,6 +963,251 @@
           "url": "/documents/Masked_Clinical_Summary.pdf"
         }
       ]
+    },
+    {
+      "orderId": "SUR-001",
+      "patient": {
+        "name": "Margaret Foster",
+        "mrn": "952347",
+        "dob": "1958-07-23",
+        "memberId": "H489573K"
+      },
+      "order": {
+        "type": "Radical Mastectomy",
+        "imagingType": "Radical Mastectomy",
+        "imagingModality": "Surgery",
+        "cptCodes": [
+          "19305"
+        ],
+        "diagnosisCodes": [
+          "C50.911"
+        ],
+        "dateOfService": "2026-03-15",
+        "orderingProvider": {
+          "name": "Dr. Jonathan Pierce",
+          "npi": "1528374650",
+          "networkStatus": "In Network"
+        }
+      },
+      "payer": {
+        "name": "Aetna",
+        "planName": "Aetna Choice PPO",
+        "planType": "Commercial",
+        "status": "Active",
+        "effectiveDate": "2026-01-01",
+        "endDate": "2026-12-31"
+      },
+      "eligibilityVerification": {
+        "serviceTypeCode": "78",
+        "covered": true,
+        "priorAuthRequired": false,
+        "referralRequired": false,
+        "financials": {
+          "deductible": {
+            "total": 1500,
+            "used": 200
+          },
+          "outOfPocket": {
+            "total": 4000,
+            "used": 800
+          },
+          "copay": 0,
+          "coinsurance": "20%"
+        }
+      },
+      "paStatus": {
+        "authStatus": "NAR",
+        "AutomationWorkflow": "Completed"
+      },
+      "businessOffice": {
+        "entries": [
+          {
+            "date": "02/28/2026",
+            "detailsText": "Details: Date: 02/28/2026, Initials: MF-JP, As per Insurance Aetna Choice PPO- Active (01/01/2026),\nRadical Mastectomy (19305) for C50.911 (Malignant neoplasm of unspecified site of right female breast)\nAuth status: NAR - No Authorization Required per Aetna policy\nVerified with insurance: procedure approved under standard coverage\nPrior Auth Questions:\n• Has patient completed diagnostic imaging?\n• Are pathology results confirming malignancy?\n\n2/28 Verified NAR status with Aetna, case cleared for scheduling",
+            "authCases": [
+              {
+                "id": "1",
+                "radioButtonStatus": "NAR",
+                "title": "Benefits Verification",
+                "details": "02/28/2026 Verified benefits with Aetna Choice PPO\nRadical Mastectomy (19305) does not require prior authorization\nPatient has met medical necessity criteria with confirmed diagnosis\nIn-network provider - standard coverage applies\nDeductible: $200 of $1500 met, 20% coinsurance after deductible",
+                "status": "Completed"
+              },
+              {
+                "id": "2",
+                "radioButtonStatus": "Approved",
+                "title": "Scheduling Cleared",
+                "details": "02/28/2026 Case cleared for scheduling\nNo auth required - patient may proceed with surgery\nEstimated patient responsibility calculated and communicated\nSurgery scheduled for 03/15/2026\nPre-operative assessment completed",
+                "status": "Completed"
+              }
+            ]
+          }
+        ]
+      },
+      "documents": [
+        {
+          "id": "DOC-SUR001-1",
+          "name": "Orthopedic Consultation",
+          "type": "Clinical Notes",
+          "fetchedDate": "2026-02-28T10:15:00Z",
+          "source": "EHR System",
+          "status": "Retrieved",
+          "url": "/documents/Masked_MD_Notes.pdf"
+        },
+        {
+          "id": "DOC-SUR001-2",
+          "name": "Knee X-Ray Report",
+          "type": "Imaging Report",
+          "fetchedDate": "2026-02-28T10:20:00Z",
+          "source": "PACS System",
+          "status": "Retrieved",
+          "url": "/documents/Masked_MRI.pdf"
+        },
+        {
+          "id": "DOC-SUR001-3",
+          "name": "Physical Therapy Records",
+          "type": "Therapy Notes",
+          "fetchedDate": "2026-02-28T10:25:00Z",
+          "source": "PT Portal",
+          "status": "Retrieved",
+          "url": "/documents/Masked_MD_Notes.pdf"
+        },
+        {
+          "id": "DOC-SUR001-4",
+          "name": "CBC/CMP Reports",
+          "type": "CBC/CMP Report",
+          "fetchedDate": "2026-02-28T10:30:00Z",
+          "source": "Lab Portal",
+          "status": "Retrieved",
+          "url": "/documents/Masked_Lab_results.pdf"
+        }
+      ]
+    },
+    {
+      "orderId": "SUR-002",
+      "patient": {
+        "name": "Jennifer Garcia",
+        "mrn": "637829",
+        "dob": "1965-04-12",
+        "memberId": "BC7849301"
+      },
+      "order": {
+        "type": "Radical Mastectomy",
+        "imagingType": "Radical Mastectomy",
+        "imagingModality": "Surgery",
+        "cptCodes": [
+          "19305"
+        ],
+        "diagnosisCodes": [
+          "C50.911"
+        ],
+        "dateOfService": "2026-03-20",
+        "orderingProvider": {
+          "name": "Dr. Rebecca Martinez",
+          "npi": "1649238507",
+          "networkStatus": "In Network"
+        }
+      },
+      "payer": {
+        "name": "Aetna",
+        "planName": "Aetna Choice PPO",
+        "planType": "Commercial",
+        "status": "Active",
+        "effectiveDate": "2026-01-01",
+        "endDate": "2026-12-31"
+      },
+      "eligibilityVerification": {
+        "serviceTypeCode": "78",
+        "covered": true,
+        "priorAuthRequired": false,
+        "referralRequired": false,
+        "financials": {
+          "deductible": {
+            "total": 2000,
+            "used": 1500
+          },
+          "outOfPocket": {
+            "total": 5000,
+            "used": 3200
+          },
+          "copay": 0,
+          "coinsurance": "20%"
+        }
+      },
+      "paStatus": {
+        "authStatus": "NAR",
+        "AutomationWorkflow": "Completed"
+      },
+      "businessOffice": {
+        "entries": [
+          {
+            "date": "02/25/2026",
+            "detailsText": "Details: Date: 02/25/2026, Initials: JG-RM, As per Insurance Aetna Choice PPO- Active (01/01/2026),\nRadical Mastectomy (19305) for C50.911 (Malignant neoplasm of unspecified site of right female breast)\nAuth status: NAR - No Authorization Required per Aetna policy\nVerified with insurance: procedure approved under standard coverage\nPrior Auth Questions:\n• Has patient completed diagnostic imaging?\n• Are pathology results confirming malignancy?\n\n2/25 Verified NAR status with Aetna, case cleared for scheduling",
+            "authCases": [
+              {
+                "id": "1",
+                "radioButtonStatus": "NAR",
+                "title": "Insurance Verification",
+                "details": "02/25/2026 Contacted Aetna Choice PPO to verify authorization requirements\nConfirmed: Radical Mastectomy (19305) does not require prior auth\nPatient meets medical necessity criteria with confirmed diagnosis\nCoverage verified: Active with in-network benefits\nDeductible: $1500 of $2000 met, 20% coinsurance after deductible",
+                "status": "Completed"
+              },
+              {
+                "id": "2",
+                "radioButtonStatus": "Approved",
+                "title": "Surgical Clearance",
+                "details": "02/25/2026 Case cleared for scheduling\nNo auth required - patient may proceed with surgery\nAll clinical documentation reviewed and meets surgical criteria\nEstimated patient responsibility communicated\nSurgery scheduled for 03/20/2026\nPre-operative assessment completed",
+                "status": "Completed"
+              }
+            ]
+          }
+        ]
+      },
+      "documents": [
+        {
+          "id": "DOC-SUR002-1",
+          "name": "Neurosurgery Consultation",
+          "type": "Clinical Notes",
+          "fetchedDate": "2026-02-22T14:30:00Z",
+          "source": "EHR System",
+          "status": "Retrieved",
+          "url": "/documents/Masked_MD_Notes.pdf"
+        },
+        {
+          "id": "DOC-SUR002-2",
+          "name": "Lumbar Spine MRI",
+          "type": "Imaging Report",
+          "fetchedDate": "2026-02-22T14:35:00Z",
+          "source": "PACS System",
+          "status": "Retrieved",
+          "url": "/documents/Masked_MRI.pdf"
+        },
+        {
+          "id": "DOC-SUR002-3",
+          "name": "EMG/NCS Study",
+          "type": "Diagnostic Report",
+          "fetchedDate": "2026-02-22T14:40:00Z",
+          "source": "Lab Portal",
+          "status": "Retrieved",
+          "url": "/documents/Masked_Lab_results.pdf"
+        },
+        {
+          "id": "DOC-SUR002-4",
+          "name": "Physical Therapy Records",
+          "type": "Therapy Notes",
+          "fetchedDate": "2026-02-22T14:45:00Z",
+          "source": "PT Portal",
+          "status": "Retrieved",
+          "url": "/documents/Masked_MD_Notes.pdf"
+        },
+        {
+          "id": "DOC-SUR002-5",
+          "name": "Pre-operative Labs",
+          "type": "CBC/CMP Report",
+          "fetchedDate": "2026-02-22T14:50:00Z",
+          "source": "Lab Portal",
+          "status": "Retrieved",
+          "url": "/documents/Masked_Lab_results.pdf"
+        }
+      ]
     }
   ]
 }

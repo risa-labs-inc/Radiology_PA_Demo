@@ -354,10 +354,12 @@ export default function Authorization() {
   return (
     <div className="pb-24">
       <div className="max-w-4xl mx-auto">
-        {/* Section 1: IMAGING SERVICE REQUESTED (Top Priority) */}
+        {/* Section 1: SERVICE REQUESTED (Top Priority) */}
         <div className="bg-white border rounded-lg p-4 mb-4">
           <div className="mb-3">
-            <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Imaging Service Requested</h2>
+            <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">
+              {order.imagingModality === 'Surgery' ? 'Service Requested' : 'Imaging Service Requested'}
+            </h2>
             <div className="text-xl font-bold text-gray-900">{order.imagingType}</div>
           </div>
 
@@ -367,7 +369,9 @@ export default function Authorization() {
               <div className="text-sm font-medium text-gray-900">{order.cptCodes.join(', ')}</div>
             </div>
             <div className="border rounded-lg p-3">
-              <div className="text-xs text-gray-500 mb-1">Imaging Modality</div>
+              <div className="text-xs text-gray-500 mb-1">
+                {order.imagingModality === 'Surgery' ? 'Modality' : 'Imaging Modality'}
+              </div>
               <div className="text-sm font-medium text-gray-900">{order.imagingModality}</div>
             </div>
           </div>
@@ -376,7 +380,22 @@ export default function Authorization() {
         {/* Section 2: Authorization Status */}
         <div className="bg-white border rounded-lg p-4 mb-4">
           <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Authorization Status</h3>
-          {getAuthStatusBadge(paStatus.authStatus)}
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex-1">
+              {getAuthStatusBadge(paStatus.authStatus)}
+            </div>
+            {paStatus.authStatus === 'NAR' && (
+              <button
+                onClick={() => openDocument(getFiledPAScreenshot(), 'NAR Verification Documentation')}
+                className="flex-shrink-0 p-2 hover:bg-gray-100 rounded-lg transition-colors group"
+                title="View/Download NAR Documentation"
+              >
+                <svg className="w-5 h-5 text-gray-600 group-hover:text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Section 3: Payer Authorization Details (Conditional) */}

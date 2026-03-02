@@ -261,7 +261,7 @@ export default function PAOrders() {
           <div className="p-6 border-t flex justify-between items-center bg-gray-50">
             <button
               onClick={() => handlePatientClick(selectedOrder.patient.mrn)}
-              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+              className="px-4 py-2 text-sm bg-black text-white rounded hover:bg-gray-800"
             >
               View Full Details
             </button>
@@ -281,7 +281,7 @@ export default function PAOrders() {
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b px-6 py-4 sticky top-0 z-10">
         <div className="flex items-center justify-between mb-4">
-          <h1 className="text-xl font-semibold">Radiology PA Orders</h1>
+          <h1 className="text-xl font-semibold">PA worklist</h1>
           <div className="relative">
             <button
               className="flex items-center gap-1.5 text-sm text-blue-600 hover:underline"
@@ -373,7 +373,7 @@ export default function PAOrders() {
                 </th>
                 <th className="text-left px-4 py-3 font-medium text-gray-700">Order ID ↓</th>
                 <th className="text-left px-4 py-3 font-medium text-gray-700">Patient Name ↓</th>
-                <th className="text-left px-4 py-3 font-medium text-gray-700">Imaging Type ↓</th>
+                <th className="text-left px-4 py-3 font-medium text-gray-700">Type ↓</th>
                 <th className="text-left px-4 py-3 font-medium text-gray-700">CPT Codes ↓</th>
                 <th className="text-left px-4 py-3 font-medium text-gray-700">Payer ↓</th>
                 <th className="text-left px-4 py-3 font-medium text-gray-700">Date of Service ↓</th>
