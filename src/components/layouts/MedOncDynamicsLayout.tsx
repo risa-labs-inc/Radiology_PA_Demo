@@ -256,7 +256,14 @@ export default function MedOncDynamicsLayout() {
   }
 
   const handleViewGuideline = () => {
-    openDocument('/documents/Guideline.pdf', 'Clinical Guidelines')
+    // Find the guideline document from patient documents
+    const guidelineDocument = orderData.documents?.find(doc => doc.type === 'Clinical Guideline')
+    const guidelineUrl = guidelineDocument?.url || '/documents/Guideline.pdf'
+    const guidelineTitle = guidelineDocument?.name || 'Clinical Guidelines'
+    console.log('Three Dot Menu - Patient:', orderData.patient.name, orderData.patient.mrn)
+    console.log('Three Dot Menu - Found Guideline:', guidelineDocument)
+    console.log('Three Dot Menu - Using URL:', guidelineUrl)
+    openDocument(guidelineUrl, guidelineTitle)
   }
 
   return (

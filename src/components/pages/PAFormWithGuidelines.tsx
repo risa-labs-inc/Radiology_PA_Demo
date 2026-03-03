@@ -73,6 +73,14 @@ export default function PAFormWithGuidelines() {
     )
   }
 
+  // Find the guideline document from patient documents
+  const guidelineDocument = orderData.documents?.find(doc => doc.type === 'Clinical Guideline')
+  const guidelineUrl = guidelineDocument?.url || '/documents/Guideline.pdf'
+
+  console.log('Order Data:', orderData.patient.name, orderData.patient.mrn)
+  console.log('Found Guideline Document:', guidelineDocument)
+  console.log('Using Guideline URL:', guidelineUrl)
+
   const addDiagnosis = () => {
     setDiagnoses([...diagnoses, { icdCode: '', icdDescription: '' }])
   }
@@ -184,7 +192,7 @@ export default function PAFormWithGuidelines() {
           </div>
           <div className="flex-1 overflow-hidden">
             <iframe
-              src="/documents/Guideline.pdf#view=FitH&pagemode=none&navpanes=0&toolbar=1"
+              src={`${guidelineUrl}#view=FitH&pagemode=none&navpanes=0&toolbar=1`}
               className="w-full h-full border-0"
               title="Clinical Guidelines"
             />

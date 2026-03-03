@@ -961,6 +961,15 @@
           "source": "EHR System",
           "status": "Retrieved",
           "url": "/documents/Masked_Clinical_Summary.pdf"
+        },
+        {
+          "id": "DOC-009-6",
+          "name": "PET Guidelines",
+          "type": "Clinical Guideline",
+          "fetchedDate": "2026-03-03T10:00:00Z",
+          "source": "Payer Portal",
+          "status": "Retrieved",
+          "url": "/documents/Positron%20Emission%20Tomography%20(PET)%20-%20Medical%20Clinical%20Policy%20Bulletins%20_%20Aetna.pdf"
         }
       ]
     },
