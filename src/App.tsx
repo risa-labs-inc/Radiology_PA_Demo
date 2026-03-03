@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Login from './components/pages/Login'
+import ProtectedLayout from './components/layouts/ProtectedLayout'
 import MedOncPatientLayout from './components/layouts/MedOncPatientLayout'
 import PatientOverview from './components/pages/PatientOverview'
 import PatientEV from './components/pages/PatientEV'
@@ -17,27 +19,33 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* PA Orders Home Screen */}
-        <Route path="/" element={<PAOrders />} />
+        {/* Login Route */}
+        <Route path="/login" element={<Login />} />
 
-        {/* Patient EV Screen */}
-        <Route path="/patient/:id/ev" element={<PatientEV />} />
+        {/* Protected Routes with Navbar */}
+        <Route element={<ProtectedLayout />}>
+          {/* PA Orders Home Screen */}
+          <Route path="/" element={<PAOrders />} />
 
-        {/* PA Form with Guidelines */}
-        <Route path="/patient/:id/pa-form-guidelines" element={<PAFormWithGuidelines />} />
+          {/* Patient EV Screen */}
+          <Route path="/patient/:id/ev" element={<PatientEV />} />
 
-        {/* Patient Detail Routes with Tabs */}
-        <Route path="/patient/:id" element={<MedOncPatientLayout />}>
-          <Route path="overview" element={<PatientOverview />} />
-          <Route path="dynamics" element={<MedOncDynamicsLayout />}>
-            <Route index element={<Navigate to="authorization" replace />} />
-            <Route path="authorization" element={<Authorization />} />
-            <Route path="issues" element={<Issues />} />
-            <Route path="documents" element={<Documents />} />
-            <Route path="workflow" element={<Workflow />} />
-            <Route path="auth-letters" element={<AuthLetters />} />
-            <Route path="filed-pa" element={<FiledPA />} />
-            <Route path="business-office" element={<BusinessOffice />} />
+          {/* PA Form with Guidelines */}
+          <Route path="/patient/:id/pa-form-guidelines" element={<PAFormWithGuidelines />} />
+
+          {/* Patient Detail Routes with Tabs */}
+          <Route path="/patient/:id" element={<MedOncPatientLayout />}>
+            <Route path="overview" element={<PatientOverview />} />
+            <Route path="dynamics" element={<MedOncDynamicsLayout />}>
+              <Route index element={<Navigate to="authorization" replace />} />
+              <Route path="authorization" element={<Authorization />} />
+              <Route path="issues" element={<Issues />} />
+              <Route path="documents" element={<Documents />} />
+              <Route path="workflow" element={<Workflow />} />
+              <Route path="auth-letters" element={<AuthLetters />} />
+              <Route path="filed-pa" element={<FiledPA />} />
+              <Route path="business-office" element={<BusinessOffice />} />
+            </Route>
           </Route>
         </Route>
       </Routes>

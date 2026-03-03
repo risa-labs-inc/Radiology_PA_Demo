@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "rapids-platform"
+  },
+  "targets": {
+    "rapids-platform": {
+      "hosting": {
+        "radiology-pa-demo": [
+          "radiology-pa-demo"
+        ]
+      }
+    }
+  }
+}
