@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { RadiologyPAOrder, Document, getOrderByMRN } from '../../utils/patientDataHelpers'
+import { Document, getOrderByMRN } from '../../utils/patientDataHelpers'
 import { getIcdDescription } from '../../utils/icdCodes'
 import { PAFormData } from '../common/PAForm'
 
